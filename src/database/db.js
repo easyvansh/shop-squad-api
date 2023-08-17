@@ -3,7 +3,7 @@ const { db } = require("../firebase.js");
 const products = db.collection("products");
 const orders = db.collection("orders");
 const banners = db.collection("banners");
-const users = db.collections("users")
+const users = db.collection("users")
 
 module.exports = {
   products,
