@@ -16,7 +16,6 @@ router.post("/", async (req, res) => {
   const userData = req.body;
   const ref = (Math.random() + 1).toString(36).substring(7);
   userData.ref = ref;
-  console.log("Here")
 
   const newUser = await createUser(userData);
 
