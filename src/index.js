@@ -5,7 +5,7 @@ const userRoutes = require("./router/userRoutes");
 const paymentRoutes = require("./router/paymentRoutes");
 const bodyParser = require("body-parser");
 const app = express();
-const PORT =  3000;
+const PORT =  process.env.PORT  || 3000;
 let cors = require("cors");
 app.use(cors());
 
