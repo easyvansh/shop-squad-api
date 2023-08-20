@@ -15,7 +15,8 @@ router.get("/:reference", async (req, res) => {
 router.post("/", async (req, res) => {
   const userData = req.body;
   const ref = (Math.random() + 1).toString(36).substring(7);
-  userData.ref = ref;
+  userData.ref = userData.uid;
+  console.log(userData);
 
   const newUser = await createUser(userData);
 
