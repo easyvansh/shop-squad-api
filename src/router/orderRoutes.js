@@ -15,8 +15,8 @@ router.get("/:reference", async (req, res) => {
 router.post("/", async (req, res) => {
   const orderData = req.body;
   const ref = (Math.random() + 1).toString(36).substring(7);
-  console.log(orderData);
   orderData.ref = ref;
+  console.log(orderData);
 
   const newOrder = await createOrder(orderData);
 
