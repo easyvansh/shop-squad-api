@@ -32,10 +32,12 @@ app.get("/", (req, res) => {
     }
     h1 {
       font-size: 36px;
+      margin: 10px;
     }
     ul {
       list-style: none;
       padding: 0;
+      margin: 10px;
     }
     li {
       margin: 10px;
@@ -44,17 +46,6 @@ app.get("/", (req, res) => {
       text-decoration: none;
       color: #007bff;
       font-weight: bold;
-    }
-    input {
-      margin-top: 10px;
-      padding: 5px;
-    }
-    button {
-      padding: 5px 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
     }
   </style>
     </head>
@@ -65,14 +56,7 @@ app.get("/", (req, res) => {
       <ul>
         <li><a href="/products">Products</a> - Manage Available Products</li>
         <li><a href="/users">Users</a> - Manage User Account</li>
-        <form action="/users/:ref" method="get">
-        <input type="text" name="ref" placeholder="Enter User ID">
-        <button type="submit">Access User</button>
-        </form>
         <li><a href="/orders">Orders</a> - Handle User Orders</li>
-        <form action="/orders/:ref" method="get">
-        <input type="text" name="ref" placeholder="Enter user reference">
-        <button type="submit">Go to User's Orders</button>
       </form>
       </ul>
       </center>
