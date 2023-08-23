@@ -28,8 +28,7 @@ app.get("/", (req, res) => {
       margin: 0;
       display: flex;
       height: 100vh;
-      justify-content:center;
-      text-align: center;
+      align-items:center;
     }
     h1 {
       font-size: 36px;
