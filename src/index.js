@@ -32,12 +32,10 @@ app.get("/", (req, res) => {
     }
     h1 {
       font-size: 36px;
-      align-items:center;
     }
     ul {
       list-style: none;
       padding: 0;
-      align-items:center;
     }
     li {
       margin: 10px;
@@ -61,6 +59,7 @@ app.get("/", (req, res) => {
   </style>
     </head>
     <body>
+    <center>
       <h1>Welcome to the Shop-Squad App Server</h1>
       <p>This server serves as the backend for the Shop-Squad App, an ecommerce platform with a group buy feature. Below are the available routes:</p>
       <ul>
@@ -76,6 +75,7 @@ app.get("/", (req, res) => {
         <button type="submit">Access User</button>
       </form>
       </ul>
+      </center>
     </body>
     </html>
   `;
