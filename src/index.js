@@ -65,14 +65,14 @@ app.get("/", (req, res) => {
       <ul>
         <li><a href="/products">Products</a> - Manage Available Products</li>
         <li><a href="/users">Users</a> - Manage User Account</li>
-        <form action="/users/" method="get">
-        <input type="text" name="userId" placeholder="Enter User ID">
+        <form action="/users/:ref" method="get">
+        <input type="text" name="ref" placeholder="Enter User ID">
         <button type="submit">Access User</button>
         </form>
-        <li><a href="/orders">Orders</a> - Handle user orders</li>
-        <form action="/orders/" method="get">
-        <input type="text" name="userId" placeholder="Enter User ID">
-        <button type="submit">Access User</button>
+        <li><a href="/orders">Orders</a> - Handle User Orders</li>
+        <form action="/orders/:ref" method="get">
+        <input type="text" name="ref" placeholder="Enter user reference">
+        <button type="submit">Go to User's Orders</button>
       </form>
       </ul>
       </center>
