@@ -27,8 +27,8 @@ app.get("/", (req, res) => {
       color: #fff;
       margin: 0;
       display: flex;
-      align-items: center;
       height: 100vh;
+      justify-content:center;
       text-align: center;
     }
     h1 {
