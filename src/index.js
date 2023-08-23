@@ -28,14 +28,16 @@ app.get("/", (req, res) => {
       margin: 0;
       display: flex;
       height: 100vh;
-      align-items:center;
+      
     }
     h1 {
       font-size: 36px;
+      align-items:center;
     }
     ul {
       list-style: none;
       padding: 0;
+      align-items:center;
     }
     li {
       margin: 10px;
