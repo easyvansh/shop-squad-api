@@ -1,5 +1,5 @@
 const express = require("express");
-const { createCart, getCart } = require("../database/cart");
+const { createCart, getCart,clearCart } = require("../database/cart");
 const router = express.Router();
 
 // Creating the Cart
