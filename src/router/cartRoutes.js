@@ -7,10 +7,12 @@ router.post("/", async (req, res) => {
   const cartData = req.body;
   const ref = cartData.customer.uid;
   cartData.ref = ref;
+  const cart = await getCart(req.params.ref);
 
   const newCart = await createCart(cartData);
-
+  if (!cart) {
   res.status(201).send({ status: "OK - Empty Cart Created with UID", data: newCart });
+  }
 });
 
 // Get The Cart To Display
