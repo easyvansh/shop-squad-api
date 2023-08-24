@@ -15,7 +15,6 @@ router.get("/:reference", async (req, res) => {
 router.post("/", async (req, res) => {
   const orderData = req.body;
   const ref = orderData.customer.uid;
-  console.log(ref);
   orderData.ref = ref;
 
   const newOrder = await createOrder(orderData);

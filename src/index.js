@@ -25,12 +25,17 @@ app.get("/", (req, res) => {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #222;
       color: #fff;
-      margin: 0;
+      margin: 100;
       display: flex;
       height: 100vh;
       
     }
     h1 {
+      font-size: 36px;
+      margin: 10px;
+      color: #007bff;
+    }
+    h2 {
       font-size: 36px;
       margin: 10px;
     }
@@ -51,8 +56,8 @@ app.get("/", (req, res) => {
     </head>
     <body>
     <center>
-      <h1>Server is Now Online...</h1>
-      <h1>Welcome to the Shop-Squad App Server</h1>
+      <h1>Server is Now Online . . .</h1>
+      <h2>Welcome to the Shop-Squad App Server</h2>
       <p>This server serves as the backend for the Shop-Squad App, an ecommerce platform with a group buy feature. Below are the available routes:</p>
       <ul>
         <li><a href="/products">Products</a> - Manage Available Products</li>
