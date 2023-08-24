@@ -51,13 +51,13 @@ app.get("/", (req, res) => {
     </head>
     <body>
     <center>
+      <h1>Server is Now Online...</h1>
       <h1>Welcome to the Shop-Squad App Server</h1>
       <p>This server serves as the backend for the Shop-Squad App, an ecommerce platform with a group buy feature. Below are the available routes:</p>
       <ul>
         <li><a href="/products">Products</a> - Manage Available Products</li>
-        <li><a href="/users">Users</a> - Manage User Account</li>
-        <li><a href="/orders">Orders</a> - Handle User Orders</li>
-      </form>
+        <li><a href="/users">Users</a> - Manage User Account(add unique user Id to get access)</li>
+        <li><a href="/orders">Orders</a> - Handle User Orders(add unique user Id to get access)</li>
       </ul>
       </center>
     </body>
