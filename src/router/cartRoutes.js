@@ -7,7 +7,9 @@ router.post("/", async (req, res) => {
   const cartData = req.body;
   const ref = cartData.customer.uid;
   cartData.ref = ref;
-  const cart = await getCart(req.params.ref);
+  const cart = await getCart(ref);
+  console.log(cartData)
+  console.log(cart)
 
   const newCart = await createCart(cartData);
   if (!cart) {
