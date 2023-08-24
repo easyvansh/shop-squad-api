@@ -9,7 +9,6 @@ router.post("/", async (req, res) => {
   cartData.ref = ref;
   const cart = await getCart(ref);
   console.log(cartData)
-  console.log(cart)
 
   const newCart = await createCart(cartData);
   if (!cart) {
