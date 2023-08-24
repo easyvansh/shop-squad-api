@@ -2,6 +2,7 @@ const express = require("express");
 const productRoutes = require("./router/productRoutes");
 const orderRoutes = require("./router/orderRoutes");
 const userRoutes = require("./router/userRoutes");
+const userRoutes = require("./router/cartRoutes");
 const paymentRoutes = require("./router/paymentRoutes");
 const bodyParser = require("body-parser");
 const app = express();
@@ -11,8 +12,8 @@ app.use(cors());
 
 app.use(bodyParser.json());
 app.use("/products", productRoutes);
-app.use("/orders", orderRoutes);
 app.use("/users", userRoutes);
+app.use("/cart", cartRoutes);
 app.use("/payments", paymentRoutes);
 
 // Define the main route with modern styling and a short description
