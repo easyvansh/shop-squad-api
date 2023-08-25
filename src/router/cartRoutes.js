@@ -8,14 +8,26 @@ router.post("/", async (req, res) => {
   const ref = cartData.customer.uid;
   cartData.ref = ref;
   console.log(cartData)
-  
-  const newCart = await createCart(cartData);
-  const cart = await getCart(ref);
+  try
+  {
+    const cart = await getCart(req.params.reference);
+    const newCart = await createCart(cartData);
+    console.log(cart)
   if (!cart) {
-  res.status(201).send({ status: "OK - Empty Cart Created with UID", data: newCart });
+    res.status(201).send({ status: "OK - Empty Cart Created with UID", data: newCart });
   }
-  return;
-});
+  return;}
+  catch(e){
+    res.status(400).json({
+      error: e.message,
+    });
+  }
+  finally{
+    const newCart = await createCart(cartData);
+  }
+
+}
+);
 
 // Get The Cart To Display
 router.get("/:reference", async (req, res) => {

@@ -1,12 +1,13 @@
 const express = require("express");
+require("dotenv").config(); 
+const app = express();
+const PORT = process.env.PORT || 3000;
 const productRoutes = require("./router/productRoutes");
 const orderRoutes = require("./router/orderRoutes");
 const userRoutes = require("./router/userRoutes");
 const cartRoutes = require("./router/cartRoutes");
 const paymentRoutes = require("./router/paymentRoutes");
 const bodyParser = require("body-parser");
-const app = express();
-const PORT = process.env.PORT || 3000;
 let cors = require("cors");
 app.use(cors());
 
