@@ -14,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
+app.use("/orders", orderRoutes);
 app.use("/cart", cartRoutes);
 app.use("/payments", paymentRoutes);
 
