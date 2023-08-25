@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
     res.status(400).json({
       error: e.message,
     });
+    console.log(e)
   }
   finally{
     const newCart = await createCart(cartData);
