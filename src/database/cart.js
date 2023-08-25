@@ -12,6 +12,7 @@ const getCart = async (ref) => {
 };
 
 
+
 const clearCart = async (ref) => {
     const cart = await db.cart.where("ref", "==", ref).get();
     cart.delete(docs.ref);
