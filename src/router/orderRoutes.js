@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
   const orderData = req.body;
   const ref = orderData.customer.uid;
   orderData.ref = ref;
+  console.log(orderData)
 
   const newOrder = await createOrder(orderData);
 
